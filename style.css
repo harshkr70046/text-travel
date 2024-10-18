@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    background-color: black;
+    display: grid;
+    place-items: center;
+
+}
+h1{
+    color: white;
+    font-size: 8rem;
+    position: relative;
+    text-transform: uppercase;
+}
+h1::before{
+    /* content: "subscribe..."; */
+    content: "subscribe...";
+    width:100%;
+    position: absolute;
+    color: yellow;
+    text-transform: uppercase;
+    border-right: 2px solid yellow;
+    overflow: hidden;
+    animation: travel 3s linear infinite;
+    -webkit-animation: travel 3s linear infinite;
+}
+@keyframes travel {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+@media (width<=550px) {
+    html{
+        font-size: 35%;
+    }
+}
+@media (width<=320px) {
+    html{
+        font-size: 25%;
+    }
+}
